@@ -1,0 +1,426 @@
+/*
+ * @title:所有图标CSS，因为最终汇总为一个CSS，故可将图标单独放在一个文件
+ * @desc: 
+ */
+i[class*='icon-calendar-'] {
+    display: inline-block;
+    @include imageSet("../imgs/sprite/");
+    vertical-align: middle;
+}
+
+// 侧边栏左侧
+i.icon-calendar-add {
+    background-image: url(../imgs/1x/icon-calendar-add.png);
+    height: 12px;
+    width: 12px;
+}
+
+// 月视图，快捷新建事件
+i.icon-calendar-add-quick {
+    background-image: url(../imgs/1x/icon-calendar-add-quick.png);
+    height: 9px;
+    width: 9px;
+}
+
+i.icon-calendar-arrow-downward {
+    background-image: url(../imgs/1x/icon-calendar-arrow-downward.png);
+    height: 5px;
+    width: 10px;
+}
+
+i.icon-calendar-arrow-upward {
+    background-image: url(../imgs/1x/icon-calendar-arrow-upward.png);
+    height: 5px;
+    width: 10px;
+}
+
+i.icon-calendar-arrow-downward-hover {
+    background-image: url(../imgs/1x/icon-calendar-arrow-downward-hover.png);
+}
+
+i.icon-calendar-arrow-upward-hover {
+    background-image: url(../imgs/1x/icon-calendar-arrow-upward-hover.png);
+}
+
+i.icon-calendar-arrow-downward-hover {
+    background-image: url(../imgs/1x/icon-calendar-arrow-downward-hover.png);
+}
+
+i.icon-calendar-arrow-upward-hover {
+    background-image: url(../imgs/1x/icon-calendar-arrow-upward-hover.png);
+}
+
+
+/* 小月历左右icon */
+
+i.icon-calendar-smc-prev,
+i.icon-calendar-smc-next {
+    width: 24px;
+    height: 26px;
+}
+
+i.icon-calendar-smc-prev {
+    background-image: url(../imgs/1x/icon-calendar-smc-prev.png);
+}
+
+i.icon-calendar-smc-prev-hover {
+    background-image: url(../imgs/1x/icon-calendar-smc-prev-hover.png);
+}
+
+i.icon-calendar-smc-next {
+    background-image: url(../imgs/1x/icon-calendar-smc-next.png);
+}
+
+i.icon-calendar-smc-next-hover {
+    background-image: url(../imgs/1x/icon-calendar-smc-next-hover.png);
+}
+
+
+/* 小月历左右icon end */
+
+i.icon-calendar-crumb {
+    background-image: url(../imgs/1x/icon-calendar-crumb.png);
+    height: 14px;
+    width: 7px;
+}
+
+i.icon-calendar-dc-next {
+    background-image: url(../imgs/1x/icon-calendar-dc-next.png);
+    height: 28px;
+    width: 30px;
+    &:hover,
+    &:focus {
+        background-image: url(../imgs/1x/icon-calendar-dc-next-hover.png);
+    }
+}
+
+i.icon-calendar-dc-prev {
+    background-image: url(../imgs/1x/icon-calendar-dc-prev.png);
+    height: 28px;
+    width: 30px;
+    &:hover,
+    &:focus {
+        background-image: url(../imgs/1x/icon-calendar-dc-prev-hover.png);
+    }
+}
+
+i.icon-calendar-triangle-down {
+    background-image: url(../imgs/1x/icon-calendar-triangle-down.png);
+    height: 4px;
+    width: 7px;
+}
+
+i.icon-calendar-alarm {
+    background-image: url(../imgs/1x/icon-calendar-alarm.png);
+    height: 16px;
+    width: 15px;
+}
+
+i.icon-calendar-remind {
+    background-image: url(../imgs/1x/icon-calendar-remind.png);
+    height: 7px;
+    width: 7px;
+}
+
+i.icon-calendar-normal-m {
+    background-image: url(../imgs/1x/icon-calendar-normal-m.png);
+    height: 7px;
+    width: 7px;
+}
+
+i.icon-calendar-normal-s {
+    background-image: url(../imgs/1x/icon-calendar-normal-s.png);
+    height: 5px;
+    width: 5px;
+}
+
+i.icon-calendar-normal {
+    background-image: url(../imgs/1x/icon-calendar-normal.png);
+    height: 5px;
+    width: 5px;
+}
+
+i.icon-calendar-circle {
+    background-image: url(../imgs/1x/icon-calendar-circle.png);
+    height: 11px;
+    width: 13px;
+}
+
+i.icon-calendar-today-m {
+    background-image: url(../imgs/1x/icon-calendar-today-m.png);
+    height: 7px;
+    width: 7px;
+}
+
+
+/**
+ * write by shijinhua
+ */
+i{
+    &.icon-calendar-arrow-left {
+        background-image: url(../imgs/1x/icon-calendar-arrow-left.png);
+        height: 14px;
+        width: 15px;
+    }
+
+    &.icon-calendar-arrow-left-hover {
+        background-image: url(../imgs/1x/icon-calendar-arrow-left-hover.png);
+    }
+
+    &.icon-calendar-arrow-up {
+        background-image: url(../imgs/1x/icon-calendar-arrow-up.png);
+        height: 11px;
+        width: 8px;
+        &.first{
+            background-image: url(../imgs/1x/icon-calendar-arrow-up-gray.png);
+        }
+    }
+
+    &.icon-calendar-arrow-up-hover {
+        background-image: url(../imgs/1x/icon-calendar-arrow-up-hover.png);
+        &.first{
+            background-image: url(../imgs/1x/icon-calendar-arrow-up-gray.png);
+        }
+    }
+
+    &.icon-calendar-arrow-down {
+        background-image: url(../imgs/1x/icon-calendar-arrow-down.png);
+        height: 11px;
+        width: 8px;
+        &.last{
+            background-image: url(../imgs/1x/icon-calendar-arrow-down-gray.png);
+        }
+    }
+
+    &.icon-calendar-arrow-down-hover {
+        background-image: url(../imgs/1x/icon-calendar-arrow-down-hover.png);
+        &.last{
+            background-image: url(../imgs/1x/icon-calendar-arrow-down-gray.png);
+        }
+    }
+
+    &.icon-calendar-arrow-bottom {
+        width: 10px;
+        height: 11px;
+        background-image: url(../imgs/1x/icon-calendar-arrow-bottom.png);
+    }
+
+    &.icon-calendar-reflash {
+        background-image: url(../imgs/1x/icon-calendar-reflash.png);
+        height: 14px;
+        width: 14px;
+    }
+
+    &.icon-calendar-reflash-hover {
+        background-image: url(../imgs/1x/icon-calendar-reflash-hover.png);
+    }
+
+    &.icon-calendar-commpic-help {
+        background-image: url(../imgs/1x/icon-calendar-commpic-help.png);
+        height: 15px;
+        width: 15px;
+    }
+    &.icon-calendar-commpic-help-hover{
+        background-image: url(../imgs/1x/icon-calendar-commpic-help-hover.png);
+    }
+
+    &.icon-calendar-close-x {
+        background-image: url(../imgs/1x/icon-calendar-close-x.png);
+        height: 12px;
+        width: 12px;
+    }
+
+    &.icon-calendar-search-magnifier {
+        background-image: url(../imgs/1x/icon-calendar-search-magnifier.png);
+        height: 16px;
+        width: 16px;
+    }
+
+    &.icon-calendar-text-word {
+        background-image: url(../imgs/1x/icon-calendar-text-word.png);
+        height: 36px;
+        width: 30px;
+    }
+
+    &.icon-calendar-cross-del {
+        background-image: url(../imgs/1x/icon-calendar-cross-del.png);
+        height: 10px;
+        width: 10px;
+    }
+
+    &.icon-calendar-cross-del-deepcolor {
+        background-image: url(../imgs/1x/icon-calendar-cross-del-deepcolor.png);
+        height: 10px;
+        width: 10px;
+    }
+    &.icon-calendar-desc {
+        background-image: url(../imgs/1x/icon-calendar-desc.png);
+        height: 10px;
+        width: 7px;
+    }
+    &.icon-calendar-asc {
+        background-image: url(../imgs/1x/icon-calendar-asc.png);
+        height: 10px;
+        width: 7px;
+    }
+    &.icon-calendar-lock1 {
+        background-image: url(../imgs/1x/icon-calendar-lock1.png);
+        height: 16px;
+        width: 16px;
+    }
+    &.icon-calendar-mpic-go {
+        background-image: url(../imgs/1x/icon-calendar-mpic-go.png);
+        height: 16px;
+        width: 16px;
+    }
+    &.icon-calendar-mpic-delete1 {
+        background-image: url(../imgs/1x/icon-calendar-mpic-delete1.png);
+        height: 16px;
+        width: 16px;
+    }
+    &.icon-calendar-mpic-ok1 {
+        background-image: url(../imgs/1x/icon-calendar-mpic-ok1.png);
+        height: 16px;
+        width: 16px;
+    }
+    &.icon-calendar-v{
+        background-image: url(../imgs/1x/icon-calendar-v.png);
+        height: 16px;
+        width: 16px;
+    }
+}
+/**
+ * /end  shijinhua 
+ */
+
+i.icon-calendar-more-item {
+    background-image: url(../imgs/1x/icon-calendar-more-item.png);
+    width: 12px;
+    height: 12px;
+}
+
+// 更多事件的弹出框关闭按钮
+i.icon-calendar-close {
+    background-image: url(../imgs/1x/icon-calendar-close.png);
+    width: 24px;
+    height: 24px;
+}
+
+i.icon-calendar-close-hover {
+    background-image: url(../imgs/1x/icon-calendar-close-hover.png);
+}
+
+i.icon-calendar-today {
+    background-image: url(../imgs/1x/icon-calendar-today.png);
+    width: 20px;
+    height: 20px;
+}
+
+i.icon-calendar-notice {
+    background-image: url(../imgs/1x/icon-calendar-notice.png);
+    width: 5px;
+    height: 5px;
+}
+
+i.icon-calendar-mpic-go2 {
+    background-image: url(../imgs/1x/icon-calendar-mpic-go2.png);
+    width: 15px;
+    height: 15px;
+}
+
+i {
+    /* 台历图标：全部台历、我的台历、台历设置icon */
+    &.icon-calendar-allcalendar {
+        background: url(../imgs/1x/icon-calendar-allcalendar.png);
+        height: 17px;
+        width: 19px;
+    }
+    &.icon-calendar-allcalendar-hover {
+        background: url(../imgs/1x/icon-calendar-allcalendar-hover.png);
+        height: 17px;
+        width: 19px;
+    }
+    &.icon-calendar-aboutme {
+        background: url(../imgs/1x/icon-calendar-aboutme.png);
+        height: 17px;
+        width: 19px;
+    }
+    &.icon-calendar-aboutme-hover {
+        background: url(../imgs/1x/icon-calendar-aboutme-hover.png);
+        height: 17px;
+        width: 19px;
+    }
+    &.icon-calendar-setting {
+        background: url(../imgs/1x/icon-calendar-setting.png);
+        height: 17px;
+        width: 19px;
+    }
+    &.icon-calendar-setting-hover {
+        background: url(../imgs/1x/icon-calendar-setting-hover.png);
+        height: 17px;
+        width: 19px;
+    }
+    /* 台历图标：全部台历、我的台历、台历设置icon  end */
+    /* 台历引用框弹出上一页、下一页 */
+    &.icon-calendar-btn-next,
+    &.icon-calendar-btn-prev {
+        width: 6px;
+        height: 10px;
+    }
+    &.icon-calendar-btn-next {
+        background: url(../imgs/1x/icon-calendar-btn-next.png);
+    }
+    &.icon-calendar-btn-prev {
+        background: url(../imgs/1x/icon-calendar-btn-prev.png);
+    }
+    &.icon-calendar-btn-next-hover {
+        background: url(../imgs/1x/icon-calendar-btn-next-hover.png);
+    }
+    &.icon-calendar-btn-prev-hover {
+        background: url(../imgs/1x/icon-calendar-btn-prev-hover.png);
+    }
+    &.icon-calendar-btn-next-disable {
+        background: url(../imgs/1x/icon-calendar-btn-next-disable.png);
+    }
+    &.icon-calendar-btn-prev-disable {
+        background: url(../imgs/1x/icon-calendar-btn-prev-disable.png);
+    }
+    /* 台历引用框弹出上一页、下一页 end*/
+    &.icon-calendar-crumbs-arrow {
+        width: 5px;
+        height: 9px;
+        background: url(../imgs/1x/icon-calendar-crumbs-arrow.png);
+    }
+    &.icon-calendar-switch-open {
+        width: 28px;
+        height: 16px;
+        background: url(../imgs/1x/icon-calendar-switch-open.png);
+    }
+    &.icon-calendar-switch-open-hidden {
+        width: 28px;
+        height: 16px;
+        background: url(../imgs/1x/icon-calendar-switch-open-hidden.png);
+    }
+    &.icon-calendar-switch-close {
+        width: 28px;
+        height: 16px;
+        background: url(../imgs/1x/icon-calendar-switch-close.png);
+    }
+    &.icon-calendar-list-empty {
+        background: url(../imgs/1x/icon-calendar-list-empty.png);
+        width: 70px;
+        height: 63px;
+    }
+    
+    &.icon-calendar-ui-date-hover{
+        background: url(../imgs/1x/icon-calendar-ui-date-hover.png);
+        width: 22px;
+        height: 22px;
+    }
+    &.icon-calendar-ui-date-today{
+        background: url(../imgs/1x/icon-calendar-ui-date-today.png);
+        width: 22px;
+        height: 22px;
+    }
+}
+

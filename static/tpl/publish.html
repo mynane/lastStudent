@@ -1,0 +1,45 @@
+<!-- 编辑弹出框 -->
+<!-- target:editor-dialog-box -->
+<div class="modal-wrap person-list-dialog" com-modal ng-controller="createEditorDialog">
+    <div class="modal-title">
+        <h3 class="title">编辑评论</h3>
+        <span class="close" ng-click="closeModal()">×</span>
+    </div>
+    <div class="modal-body">
+         <div class="comment-write-content">
+           <div class="textarea-content">
+           <span class="input-title title">标题：</span><input type="text" ng-model="inputTitle" placeholder="输入标题" />
+           </div>
+            <div class="textarea-content">
+                <span class="input-title">内容：</span>
+                <textarea  name="eventDetailCommentEdit" class="event-detail-comment-edit" id="event-detail-comment-edit" ng-model="inputContent"></textarea>
+               <!--  <script type="text/javascript">
+                    ckeditor=CKEDITOR.replace('eventDetailCommentEdit');
+                </script> -->
+            </div>
+            <div class="file-upLoad">
+                <ul class="file-list">
+                    <li ng-if="isShow" class="invalid-msg">请输入评论内容或上传附件！</li>
+                </ul>
+                <div class="set-comment">
+                    <div class="upload-att" id="eventCommentA">
+                    </div>
+                    <div class="label-wrap" ng-if="false" ng-click="transfer.create=!transfer.create" ng-class={'label-wrap-checked':transfer.create}>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                        </div>提醒创建人
+                    </div>
+                    <div class="label-wrap label-wrap-two" ng-if="false" ng-click="transfer.join=!transfer.join" ng-class={'label-wrap-checked':transfer.join}>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                        </div>提醒共享人
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn cancel" ng-click="closeModal()">取消</button>
+        <button class="btn confirm" ng-click="sendEditorContent()">确认</button>
+    </div>
+</div>

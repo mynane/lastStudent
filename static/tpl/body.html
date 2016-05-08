@@ -1,0 +1,105 @@
+<!-- body模板 -->
+<!-- target:main-body -->
+<div class="joke_body" ng-controller="jokeBodyController">
+    <div class="wrap">
+        <div class="body-left clearfix">
+            <!-- <div class="box shadow">
+                <div class="user-title"><span>石进华</span><span class="glyphicon glyphicon-registration-mark"></span></div>
+                <div class="user-focus clearfix">
+                    <div class="left">
+                        <span>123</span>
+                        <h4>笑话动态</h4>
+                    </div>
+                    <div class="right">
+                        <span>234</span>
+                        <h4>关注者</h4>
+                    </div>
+                </div>
+            </div> -->
+            <div class="mian_content" id="main_content">
+             <div class="container-wrap shadow no-content" ng-if="current_id=='/myJoke'" ng-click="createEditorDialog($event)">来一发！！！</div>
+                <div class="container-wrap shadow"  ng-repeat="(index2,item2) in jokeList">
+                    <div class="joke-title">
+                        <h3>{{item2.joke_title}}</h3>
+                        <div class="upload-message" style="display: none;">石进华 2016-12-06 12:24:36</div>
+                    </div>
+                    <div class="joke-content">
+                        <div class="joke-content-text">{{item2.joke_content}}</div>
+                        <ul ng-if="item2.img_url" class="joke-img">
+                            <li ng-repeat="(index3,item3) in item2.img_url"><img ng-src="{{item3}}" img-err/></li>
+                        </ul>
+                    </div>
+                    <div class="joke-footer" ng-if="current_id!='/myJoke'">
+                        <span class="love" ng-click="setLove(item2)"><span class="glyphicon glyphicon-thumbs-up"></span><em>支持 {{item2.love}}</em></span>
+                        <span class="hate" style="display: none;"><i class=""></i><em>反对 {{item2.hate}}</em></span>
+                        <span class="comment" ng-click="showComment($event,item2)"><span class="glyphicon glyphicon-comment"></span><em>评论 {{item2.comment}}</em></span>
+                        <div class="joke-comment" ng-show="item2.show">
+                            <ul class="joke-comment-list">
+                                <li class="joke-comment-item" ng-if="commentList.length<=0">还没有评论</li>
+                                <li class="joke-comment-item" ng-repeat="(index,item) in commentList" ng-hide="index>6&&commentHide">
+                                    <div class="comment-title" >
+                                    <span class="comment-title-name">{{item.fullName}}</span>评论于/<span class="comment-time">{{item.comment_createTime}}</span>
+                                    </div>
+                                    <div class="comment-content-wrap">{{item.content}}</div>
+                                </li>
+                                <div class="show-more" ng-click="changeCommentShow($event,commentHide)"><span ng-if="commentList.length>5&&commentHide" >查看更多</span><span ng-if="commentList.length>5&&!commentHide" >收起</span></div>
+                            </ul>
+                            <div class="comment-content">
+                                <textarea placeholder="我要评论" ng-init="commentTextarea=''" ng-model="commentTextarea"></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <div class="layout-right"> <span class="text-count text-gray">还可以输入<span class="text-count-num">&nbsp;{{150-commentTextarea.length}}&nbsp;</span>个字</span>
+                                    <button class="button-publish " ng-class='{"disabled":commentTextarea.length==0 || commentTextarea.length>150}' ng-click="submitComment($event,item2,commentTextarea)"><span class="button-text">发表评论</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="joke-footer" ng-if="current_id=='/myJoke'">
+                        <div class="joke-footer-left">
+                            <span class="status">状态:<em ng-if="item2.allowed==0">待审核</em><em ng-if="item2.allowed==1">已通过</em><em ng-if="item2.allowed==2">未通过</em></span><span class="status">&nbsp;&nbsp;上传时间:<em>{{item2.create_time}}</em></span>
+                        </div>
+                        <div class="joke-footer-right">
+                                <button type="button" ng-click="editorJoke(event,item2)" class="btn btn-default">编辑</button> <button type="button" ng-click="deleteJoke(event,item2,index2)" class="btn btn-default">删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="body-right clearfix">
+            <div class="body-right-fixed shadow">
+                <div class="recommend clearfix">
+                    <span class="left">推荐名录</span>
+                    <span class="right"><span class="glyphicon glyphicon-refresh"></span><em>换一批</em></span>
+                </div>
+                <div class="person-content">
+                    <ul>
+                        <li class="vertical-middle">
+                            <span class="glyphicon glyphicon-registration-mark"></span>
+                            <span class="name mid-text">石进华</span>
+                            <span class="mid-text right">初级笑匠</span>
+                        </li class="vertical-middle">
+                        <li>
+                            <span class="glyphicon glyphicon-registration-mark"></span>
+                            <span class="name mid-text">石进华</span>
+                            <span class="mid-text right">初级笑匠</span>
+                        </li class="vertical-middle">
+                        <li>
+                            <span class="glyphicon glyphicon-registration-mark"></span>
+                            <span class="name mid-text">石进华</span>
+                            <span class="mid-text right">初级笑匠</span>
+                        </li class="vertical-middle">
+                        <li>
+                            <span class="glyphicon glyphicon-registration-mark"></span>
+                            <span class="name mid-text">石进华</span>
+                            <span class="mid-text right">初级笑匠</span>
+                        </li class="vertical-middle">
+                        <li>
+                            <span class="glyphicon glyphicon-registration-mark"></span>
+                            <span class="name mid-text">石进华</span>
+                            <span class="mid-text right">初级笑匠</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </div>

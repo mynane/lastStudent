@@ -1,0 +1,24 @@
+{
+  "name": "libsass",
+  "version": "0.1.1",
+  "devDependencies": {
+    "gulp": "latest",
+    "through2": "latest",
+    "gulp-util": "latest",
+    "gulp-postcss": "latest",
+    "gulp-sass": "latest",
+    "gm":"latest",
+    "q":"latest",
+    "postcss":"latest",
+    "gulp-jingoal-thumbnail":"latest",
+    "jingoal-sprite":"latest",
+    "postcss-jingoal-sprite":"latest",
+    "postcss-jingoal":"latest",
+    "gulp-require-jingoal":"latest",
+    "js-base64":"latest",
+    "supports-color":"latest",
+    "concat-stream":"latest",
+    "uglify-js":"latest",
+    "pixelsmith":"latest"
+  }
+}

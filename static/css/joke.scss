@@ -1,0 +1,172 @@
+@import 'utils/_variable.scss';
+@import 'utils/_mixins.scss';
+
+@import 'base/_base.scss';
+
+@import 'components/_icon.scss';
+//@import 'components/_btn.scss';
+//@import 'components/_empty.scss';
+//@import 'components/_event-detail-popup.scss';
+//@import 'layout/_frame.scss';
+//@import 'layout/_sidebar.scss';
+
+// // 每个界面单独的样式
+@import 'pages/_main.scss';
+@import 'pages/_login.scss';
+
+.modal-container,.loading-container{
+    position: absolute;
+    // left:-10000px;
+}
+.modal-mask{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+    bottom:0;
+    background: #000;
+    opacity: 0.2;
+    display: none;
+}
+.loading-container{
+    .sync-loading{
+        background: rgba(0,0,0,0);
+        position:fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:2000;
+        display: none;
+        .async-tip-content-wrap{
+            position:absolute;
+            top:50%;
+            margin-top:-26.5px;
+            left:50%;
+            margin-left:-106.5px;
+        }
+    }
+}
+.aync-loading{
+    position:absolute;
+    top:47px;
+    left:50%;
+    margin-left:-65px;
+    display: none;
+    z-index:2000;
+}
+.dropdown-menu {
+    background:#fff;
+    position: absolute;
+    z-index: 20000;
+    box-shadow:3px 4px 5px 0px rgba(0, 0, 0, 0.2);
+    border:1px solid #cacbcc;
+
+    .select-list{
+        position:static;
+        box-shadow:none;
+        border:0;
+    }
+    .bottom_btn{
+        border-top:1px solid #ebebeb;
+        height:32px;
+        cursor: pointer;
+        text-align: center;
+        
+        .vertical-middle{
+            height: 100%;
+        }
+    }
+}
+.time_select{
+    width: 58px;
+    position:absolute;
+    z-index: 20000;
+    display: none;
+}
+.att_cont {
+    li{
+        line-height: 20px;
+    }
+}
+.tooltip {
+    position: absolute;
+    z-index: 1030;
+    display: block;
+    visibility: visible;
+    font-size: 11px;
+    line-height: 1.4;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    &.in {
+        opacity: .8;
+        filter: alpha(opacity=80)
+    }
+    &.top {
+        margin-top: -3px;
+        padding: 5px 0
+    }
+    &.right {
+        margin-left: 3px;
+        padding: 0 5px
+    }
+    &.bottom {
+        margin-top: 3px;
+        padding: 5px 0
+    }
+    &.left {
+        margin-left: -3px;
+        padding: 0 5px
+    }
+}
+.tooltip-inner {
+    max-width: 200px;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid
+}
+
+.tooltip.top .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0;
+    border-top-color: #000
+}
+
+.tooltip.right .tooltip-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-width: 5px 5px 5px 0;
+    border-right-color: #000
+}
+
+.tooltip.left .tooltip-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #000
+}
+
+.tooltip.bottom .tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #000
+}

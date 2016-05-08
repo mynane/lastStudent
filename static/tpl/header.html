@@ -1,0 +1,31 @@
+<!-- 首页header区 -->
+<!-- target:main-header -->
+<div class="wrap clearfix" ng-controller="headerNav">
+<div class="logo">
+    <h3></h3>
+</div>
+<div class="header_list">
+    <ul class="clearfix" id="header-title-list">
+        <li ng-click="changeTitle($event,'/hotJoke')"><a ng-class="{'current':itemNum=='/hotJoke'}" ng-href="#hotJoke">热门笑话</a></li>
+        <li ng-click="changeTitle($event,'/characterJoke')"><a  ng-href="#characterJoke" ng-class="{'current':itemNum=='/characterJoke'}">搞笑段子</a></li>
+        <li ng-click="changeTitle($event,'/imgJoke')"><a href="#imgJoke" ng-class="{'current':itemNum=='/imgJoke'}">搞笑图片</a></li>
+        <li ng-click="changeTitle($event,'/myJoke')"><a href="#myJoke" ng-class="{'current':itemNum=='/myJoke'}">我的笑话</a></li>
+    </ul>
+</div>
+<div class="user_message">
+    <div class="login" ng-if="!userName">
+        <a href="javascript:void(0);" class="login_user" ng-click="login($event)">登录</a>
+        <span>|</span>
+        <a href="javascript:void(0);" class="register_user" ng-click="register($event)">注册</a>
+    </div>
+    <div class="message" ng-if="userName" ng-init="loginout=false" >你好，
+        <span class="user-name" ng-mouseover="loginout=true" ng-mouseout="loginout=false"><a href="javascript:void(0);" class="login_user">{{userName}}</a><span class="glyphicon glyphicon-user"></span>
+            <div class="outLogin" ng-show="loginout">
+                <span  class="outLogin-text" ng-click="outLogin($event)">退出登录</span>
+            </div>
+        </span>
+        <span class="split">|</span>
+        <span class="new-message"><span class="glyphicon glyphicon-envelope"></span><a href="javascript:void(0);" class="register_user">消息</a></span>
+    </div>
+</div>
+</div>

@@ -1,0 +1,74 @@
+<!-- 用户登录 -->
+<!-- target:login-page -->
+<div class="modal-wrap setting-popover" com-modal ng-controller="loginController">
+    <div class="modal-title">
+        <h3 class="title">登录</h3>
+        <span class="close" ng-click="closeModal()">×</span>
+    </div>
+    <div class="modal-body">
+        <div class="user-login-wrap">
+            <div class="input-item user-name">
+                <span class="input_label">用户名：</span>
+                <div class="text-input-wrap">
+                    <input class="userLoginName" type="text" ng-model="loginUserName" maxlength="16" placeholder="请输入用户名 / 邮箱">
+                </div>
+            </div>
+            <div class="input-item user-password">
+                <span class="input_label">密码：</span>
+                <div class="text-input-wrap">
+                    <input class="userLoginPassWord" type="password" ng-model="loginUserPassWord" maxlength="16" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="input-item">
+                <span class="input_label"></span>
+                <div class="label-wrap label-wrap-focus ui-checkbox ui-checkbox-focus" ng-class="{'label-wrap-checked':rememberMe}" ng-click="rememberMe=!rememberMe">
+                    <div class="checkbox-wrap"><input type="checkbox" class=" ui-hide"></div>保持登录
+                </div>
+                <span class="goRegiester" ng-click="goRegiester($event)">还没有账号？</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn cancel" ng-click="closeModal()">取消</button>
+        <button class="btn confirm" ng-click="loginSubmit($event)">提交</button>
+    </div>
+</div>
+<!-- target:register-page -->
+<div class="modal-wrap setting-popover" com-modal ng-controller="registerController">
+    <div class="modal-title">
+        <h3 class="title">注册</h3>
+        <span class="close" ng-click="closeModal()">×</span>
+    </div>
+    <div class="modal-body">
+        <div class="user-login-wrap">
+            <div class="input-item user-name">
+                <span class="input_label">用户名：</span>
+                <div class="text-input-wrap">
+                    <input class="userLoginName" ng-model="userName" type="text" maxlength="16" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="input-item user-name">
+                <span class="input_label">邮箱：</span>
+                <div class="text-input-wrap">
+                    <input class="userLoginName" ng-model="userEmail" type="text" maxlength="16" placeholder="请输入邮箱">
+                </div>
+            </div>
+            <div class="input-item user-password">
+                <span class="input_label">密码：</span>
+                <div class="text-input-wrap">
+                    <input class="userLoginPassWord" ng-model="userPassWord" type="password" maxlength="16" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="input-item user-password">
+                <span class="input_label">确认密码：</span>
+                <div class="text-input-wrap">
+                    <input class="userLoginPassWord" ng-model="userRepeatPassWord" type="password" maxlength="16" placeholder="请确认密码">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn cancel" ng-click="closeModal()">取消</button>
+        <button class="btn confirm" ng-click="registerSubmit($event)">提交</button>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<!-- target:modal-prompt -->
+<div class="modal-wrap" com-modal ng-controller="ModalPrompt">
+    <div class="modal-title">
+        <h3 class="title">{{modalTitle}}</h3>
+        <span class="close" ng-click="promptCancel()">×</span>
+    </div>
+    <div class="modal-body tip-with-btn" ng-class={"nodetail":!detail}>
+        <div class="tip-wrap layout-float-wrap">
+            <div class="tip-icon layout-float-left">
+                <i class="icon-modal-{{type}}-small"></i>
+            </div>
+            <div class="tip-title layout-float-left">
+                <h3>{{title}}</h3>
+                <div class="tip-detail" ng-if="detail">{{detail}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer" ng-if="!oneBtn">
+        <button class="btn cancel" ng-click="promptCancel()">取消</button><button class="btn confirm" ng-click="promptSubmit()">确定</button>
+    </div>
+    <div class="modal-footer" ng-if="oneBtn">
+        <button class="btn confirm" ng-click="promptSubmit()">{{oneBtn}}</button>
+    </div>
+</div>
+<!-- target:modal-prompt-repeat -->
+<div class="modal-wrap repeat-pop" com-modal ng-controller="ModalPrompt">
+    <div class="modal-title">
+        <h3 class="title">{{modalTitle}}</h3>
+        <span class="close" ng-click="promptCancel()">×</span>
+    </div>
+    <div class="modal-body tip-with-btn" ng-class={"nodetail":!detail}>
+        <div class="tip-wrap layout-float-wrap">
+            <div class="tip-icon layout-float-left">
+                <i class="icon-modal-{{type}}-small"></i>
+            </div>
+            <div class="tip-title layout-float-left">
+                <h3>{{title}}</h3>
+                <div class="tip-detail" ng-if="detail">{{detail}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer" ng-if="!oneBtn">
+        <button class="btn cancel" ng-click="promptCancel()">取消</button>
+        <button class="btn confirm" ng-click="promptSubmit()">确定</button>
+    </div>
+    <div class="modal-footer" ng-if="oneBtn">
+        <button class="btn cancel anotherBtn" ng-click="promptCancel()">{{anotherBtn}}</button>
+        <button class="btn confirm oneBtn" ng-click="promptSubmit()">{{oneBtn}}</button>
+    </div>
+</div>
